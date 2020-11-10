@@ -29,3 +29,5 @@ This option uses deprectated gcode, so I limited the acceleration in my start gc
 M204 T1000 P750; Limit accelleration to manufacturer advice
 ```
 
+Feel free to create branches with proposed changes and optimisations.
+
