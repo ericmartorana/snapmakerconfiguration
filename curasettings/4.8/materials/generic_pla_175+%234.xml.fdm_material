@@ -4,78 +4,86 @@
     <name>
       <brand>Amazon Basics</brand>
       <material>PLA</material>
-      <color>Red</color>
-      <label>PLA Translucent Red</label>
+      <color>Neon Orange</color>
+      <label>PLA Neon Orange</label>
     </name>
     <version>7</version>
     <adhesion_info />
-    <color_code>#ff0004</color_code>
+    <color_code>#ffaa00</color_code>
     <description />
     <GUID>a653cf5b-5b9b-4b42-b77d-5bbe77d9769f</GUID>
   </metadata>
   <properties>
     <density>1.24</density>
-    <diameter>1.75</diameter>
+    <diameter>1.74</diameter>
   </properties>
   <settings>
     <setting key="surface energy">100</setting>
-    <setting key="print temperature">205.0</setting>
-    <setting key="retraction speed">60.0</setting>
-    <setting key="heated bed temperature">50.0</setting>
     <setting key="standby temperature">175.0</setting>
-    <setting key="adhesion tendency">0</setting>
     <setting key="retraction amount">1.25</setting>
+    <setting key="heated bed temperature">50.0</setting>
+    <setting key="print temperature">205.0</setting>
+    <setting key="adhesion tendency">0</setting>
     <setting key="build volume temperature">28</setting>
+    <setting key="retraction speed">60.0</setting>
     <machine>
       <machine_identifier manufacturer="Creality3D" product="creality_ender4" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
       <setting key="standby temperature">180</setting>
       <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
       <setting key="retraction speed">45</setting>
     </machine>
     <machine>
       <machine_identifier manufacturer="Tronxy" product="tronxy_d01" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="heated bed temperature">55</setting>
-      <setting key="print cooling">75</setting>
       <setting key="standby temperature">180</setting>
       <setting key="retraction amount">5</setting>
+      <setting key="heated bed temperature">55</setting>
+      <setting key="print cooling">75</setting>
+      <setting key="print temperature">200.0</setting>
       <setting key="retraction speed">40.0</setting>
     </machine>
     <machine>
       <machine_identifier manufacturer="IMADE3D" product="IMADE3D JellyBOX" />
-      <setting key="print temperature">210.0</setting>
-      <setting key="heated bed temperature">55</setting>
       <setting key="retraction amount">1.0</setting>
+      <setting key="heated bed temperature">55</setting>
+      <setting key="print temperature">210.0</setting>
       <setting key="retraction speed">40.0</setting>
       <hotend id="0.4 mm">
         <setting key="hardware compatible">yes</setting>
       </hotend>
     </machine>
     <machine>
-      <machine_identifier manufacturer="Tronxy" product="tronxy_x5sa_400" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="heated bed temperature">55</setting>
-      <setting key="print cooling">75</setting>
+      <machine_identifier manufacturer="Creality3D" product="creality_cr10spro" />
       <setting key="standby temperature">180</setting>
       <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">45</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Tronxy" product="tronxy_x5sa_400" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="heated bed temperature">55</setting>
+      <setting key="print cooling">75</setting>
+      <setting key="print temperature">200.0</setting>
       <setting key="retraction speed">40.0</setting>
     </machine>
     <machine>
       <machine_identifier manufacturer="Cartesio bv" product="cartesio" />
-      <setting key="print temperature">190.0</setting>
-      <setting key="heated bed temperature">43</setting>
-      <setting key="print cooling">40.0</setting>
       <setting key="standby temperature">160</setting>
       <setting key="retraction amount">1.0</setting>
+      <setting key="heated bed temperature">43</setting>
+      <setting key="print cooling">40.0</setting>
+      <setting key="print temperature">190.0</setting>
       <setting key="retraction speed">40.0</setting>
-      <hotend id="0.25mm thermoplastic extruder">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
       <hotend id="0.8mm thermoplastic extruder">
         <setting key="hardware compatible">yes</setting>
         <setting key="retraction amount">1.5</setting>
+      </hotend>
+      <hotend id="0.25mm thermoplastic extruder">
+        <setting key="hardware compatible">yes</setting>
       </hotend>
       <hotend id="0.4mm thermoplastic extruder">
         <setting key="hardware compatible">yes</setting>
@@ -83,186 +91,178 @@
     </machine>
     <machine>
       <machine_identifier manufacturer="Tronxy" product="tronxy_xy2pro" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="heated bed temperature">55</setting>
-      <setting key="print cooling">75</setting>
       <setting key="standby temperature">180</setting>
       <setting key="retraction amount">5</setting>
+      <setting key="heated bed temperature">55</setting>
+      <setting key="print cooling">75</setting>
+      <setting key="print temperature">200.0</setting>
       <setting key="retraction speed">40.0</setting>
     </machine>
     <machine>
       <machine_identifier manufacturer="Creality3D" product="creality_ender2" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
       <setting key="standby temperature">180</setting>
       <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
       <setting key="retraction speed">45</setting>
     </machine>
     <machine>
       <machine_identifier manufacturer="Kati Hal ARGE" product="kupido" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="heated bed temperature">60</setting>
-      <setting key="print cooling">100</setting>
       <setting key="standby temperature">180</setting>
       <setting key="retraction amount">0.8</setting>
-      <setting key="retraction speed">40.0</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Creality3D" product="creality_cr10" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">45</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Tronxy" product="tronxy_xy2" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="heated bed temperature">55</setting>
-      <setting key="print cooling">75</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">40.0</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Creality3D" product="creality_ender5" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">45</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Tronxy" product="tronxy_x5sa_500" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="heated bed temperature">55</setting>
-      <setting key="print cooling">75</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">40.0</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Tronxy" product="tronxy_x" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="heated bed temperature">55</setting>
-      <setting key="print cooling">75</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">40.0</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Creality3D" product="creality_cr10spro" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">45</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Kati Hal ARGE" product="alya3dp" />
-      <setting key="print temperature">200.0</setting>
       <setting key="heated bed temperature">60</setting>
       <setting key="print cooling">100</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">1.5</setting>
+      <setting key="print temperature">200.0</setting>
       <setting key="retraction speed">40.0</setting>
     </machine>
     <machine>
       <machine_identifier manufacturer="CreawsomeMod" product="creality_base" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
       <setting key="standby temperature">180</setting>
       <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
       <setting key="retraction speed">45</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Tronxy" product="tronxy_xy2" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="heated bed temperature">55</setting>
+      <setting key="print cooling">75</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">40.0</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Tronxy" product="tronxy_x5sa_500" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="heated bed temperature">55</setting>
+      <setting key="print cooling">75</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">40.0</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Tronxy" product="tronxy_x" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="heated bed temperature">55</setting>
+      <setting key="print cooling">75</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">40.0</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Creality3D" product="creality_ender5" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">45</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Creality3D" product="creality_cr10" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">45</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Kati Hal ARGE" product="alya3dp" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">1.5</setting>
+      <setting key="heated bed temperature">60</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">40.0</setting>
     </machine>
     <machine>
       <machine_identifier manufacturer="Creality3D" product="creality_cr20" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
       <setting key="standby temperature">180</setting>
       <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">45</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Creality3D" product="creality_cr10s4" />
-      <setting key="print temperature">200.0</setting>
       <setting key="print cooling">100</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">45</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Lotmaxx" product="lotmaxx_sc60" />
       <setting key="print temperature">200.0</setting>
-      <setting key="standby temperature">200</setting>
-      <setting key="retraction amount">1.0</setting>
-      <setting key="retraction speed">40.0</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Kati Hal ARGE" product="alyanx3dp" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="heated bed temperature">60</setting>
-      <setting key="print cooling">100</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">1.5</setting>
-      <setting key="retraction speed">40.0</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Tronxy" product="tronxy_x5sa" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="heated bed temperature">55</setting>
-      <setting key="print cooling">75</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">40.0</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Creality3D" product="creality_cr20pro" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">45</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Creality3D" product="creality_cr10mini" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">45</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Creality3D" product="creality_cr10s" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
-      <setting key="retraction speed">45</setting>
-    </machine>
-    <machine>
-      <machine_identifier manufacturer="Creality3D" product="creality_ender3" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
-      <setting key="standby temperature">180</setting>
-      <setting key="retraction amount">5</setting>
       <setting key="retraction speed">45</setting>
     </machine>
     <machine>
       <machine_identifier manufacturer="Creality3D" product="creality_cr10s5" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="print cooling">100</setting>
       <setting key="standby temperature">180</setting>
       <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">45</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Creality3D" product="creality_cr10s4" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">45</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Lotmaxx" product="lotmaxx_sc60" />
+      <setting key="standby temperature">200</setting>
+      <setting key="retraction amount">1.0</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">40.0</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Kati Hal ARGE" product="alyanx3dp" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">1.5</setting>
+      <setting key="heated bed temperature">60</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">40.0</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Tronxy" product="tronxy_x5sa" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="heated bed temperature">55</setting>
+      <setting key="print cooling">75</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">40.0</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Creality3D" product="creality_cr20pro" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">45</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Creality3D" product="creality_cr10mini" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">45</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Creality3D" product="creality_cr10s" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
+      <setting key="retraction speed">45</setting>
+    </machine>
+    <machine>
+      <machine_identifier manufacturer="Creality3D" product="creality_ender3" />
+      <setting key="standby temperature">180</setting>
+      <setting key="retraction amount">5</setting>
+      <setting key="print cooling">100</setting>
+      <setting key="print temperature">200.0</setting>
       <setting key="retraction speed">45</setting>
     </machine>
     <machine>
       <machine_identifier manufacturer="Tronxy" product="tronxy_xy3" />
-      <setting key="print temperature">200.0</setting>
-      <setting key="heated bed temperature">55</setting>
-      <setting key="print cooling">75</setting>
       <setting key="standby temperature">180</setting>
       <setting key="retraction amount">5</setting>
+      <setting key="heated bed temperature">55</setting>
+      <setting key="print cooling">75</setting>
+      <setting key="print temperature">200.0</setting>
       <setting key="retraction speed">40.0</setting>
     </machine>
   </settings>
