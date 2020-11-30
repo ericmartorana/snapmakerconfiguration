@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [1.0.0]
+### Changed
+- Calibrated Linear Advance
+- Changed overhand speed settings for fine and regular
+- fixed infill pattern for fine and regular to lines
 
 
 ## [1.0.0]

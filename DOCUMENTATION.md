@@ -109,7 +109,10 @@ This profile is for normal prints, where extreme details won't matter.
 
 - infill_sparse_density = 10
 
+- infill_pattern = lines
+
 The infill density is at 10%. It's not the best but okay if you don't need sturdyness.
+The pattern lines seems to be better for skins.
 
 - speed_travel = 80
 
@@ -140,7 +143,7 @@ Also its possible to see if the bed level is good enough for the print area.
 With four lines there is also enough time to correct the z-offset if this is nescessary.
 
 - wall_overhang_angle = 30
-- wall_overhang_speed_factor = 50
+- wall_overhang_speed_factor = 75
 
 To mitigate problems with overhangs, caused by insufficent cooling is use this setting to slow down on overhangs.
 I determined this angle value with some calibration prints.
@@ -166,12 +169,18 @@ This profile is for rough prints. It's fast and most details are lost.
 
 This layer height is very good visible.
 
+- infill_pattern = default
+
+The infill pattern is not fixed in this profile.
+
 - speed_print = 60
 - speed_travel = 80
 
 The speed is at maximum advised value.
 
+- wall_overhang_speed_factor = 50
 
+60 mms/s is faster than 40 mm/s for fine and regular, so this value needs to be lower on this profile.
 ## Custom draft
 
 This profile is for printing a fast draft of the object.
@@ -180,6 +189,10 @@ This profile is for printing a fast draft of the object.
 - layer_height_0 = 0.32
 
 The layer height is four times of the Custom fine profile and really thick.
+
+- infill_pattern = default
+
+The infill pattern is not fixed in this profile.
 
 - speed_print = 60
 - speed_travel = 80
@@ -192,6 +205,9 @@ Inner and outer wall speeds are at the maximum advised printing speed.
 
 The infill densitity is extreme low, to speed up printing.
 
+- wall_overhang_speed_factor = 50
+
+60 mms/s is faster than 40 mm/s for fine and regular, so this value needs to be lower on this profile.
 
 ## Custom adaptive
 
@@ -208,12 +224,19 @@ So it's nescessary to change all values in the need of the print object.
 
 The layer height varies between 0.12 and 0.28, in steps of the nozzle diameter 0.04.
 
+- infill_pattern = default
+
+The infill pattern is not fixed in this profile.
+
 - speed_print = 60
 - speed_travel = 80
 
 The speed setting should be changed.
 For simple models this fast could be okay, but detailes object with many layer height changes could be printed besser with slow feed rates.
 
+- wall_overhang_speed_factor = 50
+
+60 mms/s is faster than 40 mm/s for fine and regular, so this value needs to be lower on this profile.
 
 # Hints
 
