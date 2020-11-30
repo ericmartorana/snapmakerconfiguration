@@ -18,6 +18,12 @@ This option in cura uses deprectated gcode, so I limited the acceleration in the
 
     M204 T1000 P750; Set accelleration
 
+## Linear advance
+
+While testing with benchy and the overhang settings, I noticed some blobs and a seam where the speed change occured.
+To improve this I calibrated linear advance with the marlin calibration pattern https://marlinfw.org/tools/lin_advance/k-factor.html
+I determined that a value of 0.7 is a good K-factor.
+
 # Start gcode
 
 This start gcode based on the example proposed by the Snapmaker support article, and optimised for cura
