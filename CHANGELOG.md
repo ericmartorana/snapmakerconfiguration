@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [1.1.1]
+### Changed
+- Set the correct machine head values
+- Added Junction Deviation
+- Changed Priming
+
 ## [1.1.0]
 ### Changed
 - Calibrated Linear Advance

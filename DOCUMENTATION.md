@@ -4,43 +4,50 @@
 
 # Base settings
 
-## Speed Settings
+## Printer
 
-Based on <https://support.snapmaker.com/hc/en-us/articles/360044341034-What-is-the-recommended-3D-printing-settings-in-Cura-or-Simplify3D-for-Snapmaker-2-0->
-(10.11.2020)
+In the Printer Settings section I set the following
 
-The recommended print speed is less than 60 mm/s, the recommended travel speed is less than 80 mm/s, and the recommended initial layer speed is less than 24 mm/s.
+### Printer Settings
 
-## Acceleration Settings
+X (Width): 320 mm
+Y (Depth): 350 mm
+Z (Height): 330 mm
+Build plate shape: Rectangular
 
-The official cura profiles limit acceleration to 1000 mm/s² via cura acceleration control settings. For travel moves this is okay, for extruding moves mm/s² is better.
-This option in cura uses deprectated gcode, so I limited the acceleration in the start gcode section via following gcode line.
+Origin at center: False
+Heated bed: True
+Heated build volume: False
+G-code flavor: Marlin
 
-    M204 T1000 P750; Set accelleration
+### Print head settings
 
-## Linear advance
+X min: -70 mm
+Y min: -23 mm
+X max: -32 mm
+Y max: -32 mm
 
-While testing with benchy and the overhang settings, I noticed some blobs and a seam where the speed change occured.
-To improve this I calibrated linear advance with the marlin calibration pattern https://marlinfw.org/tools/lin_advance/k-factor.html
-I determined that a value of 0.7 is a good K-factor.
+Gantry Height: 330 mm
 
-# Start gcode
+### Start gcode
 
 This start gcode based on the example proposed by the Snapmaker support article, and optimised for cura
 
     M104 S{material_print_temperature} T0 ; Set hotend temperature of hotend number 0
     M140 S{material_bed_temperature_layer_0} ; Set temperature of bed for first layer
     M204 T1000 P750; Set acceleration
+    M900 K0.07 ; set K-factor of linear advance
+    M205 J0.06 ; junction deviation to 0.06
     G28 ; Auto home all axes
     G90 ; Set to absolute positioning
     G0 X330 Y-10 F3000 ; Move to the outer right front with 50 mm/s
     G0 Z0 F1200 ; Move downwards to Z zero with 20 mm/s
-    G92 E-1 ; Set extruder postion to -1
+    G92 E-2 ; Set extruder postion to -2
     M109 S{material_bed_temperature_layer_0} T0 ; Wait for temperature of bed
     M190 S{print_bed_temperature} ; Wait for temperature of hotend
-    G1 E1 F200 ; Output 1 mm of filament with 3 mm/s
+    G1 E2 F200 ; Output 2 mm of filament with 3 mm/s
 
-## Summary:
+#### Summary:
 
 It starts with setting the nozzle and bed temperature defined for the chosen material.
 * M104 <https://marlinfw.org/docs/gcode/M104.html>
@@ -63,19 +70,18 @@ Because of that, I set the configuration to X330.
 G0 is used to indicate this is a non extruding movement
 * G0 <https://marlinfw.org/docs/gcode/G000-G001.html>
 
-Set extruder position to -1.
+Set extruder position to -2.
 * G92 <https://marlinfw.org/docs/gcode/G092.html>
 
 Wait for nozzle and bed temperature defined for the chosen material.
 * M109 <https://marlinfw.org/docs/gcode/M109.html>
 * M190 <https://marlinfw.org/docs/gcode/M190.html>
 
-Output 1 mm of filament with a feedrate of 200. Now the extuder is at position 0. Another G92 E0 is not required anymore.
+Output 2 mm of filament with a feedrate of 200. Now the extuder is at position 0. Another G92 E0 is not required anymore.
 * G1 <https://marlinfw.org/docs/gcode/G000-G001.html>
 
 
-
-# End gcode
+### End gcode
 
     G90 ; Set to absolute positioning
     G92 E1 ; Set extuder position to 1, to retract with the following step
@@ -86,7 +92,7 @@ Output 1 mm of filament with a feedrate of 200. Now the extuder is at position 0
     M84 ; disable steppers
 
 
-## Summary
+#### Summary
 
 The end gcode is also based on the Snapmaker support article, with a few changes regarding homing, retraction and end position.
 Most required gcodes are documented above.
@@ -94,6 +100,60 @@ Most required gcodes are documented above.
 Disable Steppers stops all Motors in the Printer System
 * M84 <https://marlinfw.org/docs/gcode/M018.html>
 
+
+## Extruder 1 Settings
+
+In the Extuder Settings section I set the following
+
+### Nozzle Settings
+Nozzle size: 0,4 mm
+Compatible material diameter: 1,75 mm
+Nozzle offset X: 0 mm
+Nozzle offset Y: 0 mm
+Cooling Fan Number: 0
+
+## Speed Settings
+
+Based on <https://support.snapmaker.com/hc/en-us/articles/360044341034-What-is-the-recommended-3D-printing-settings-in-Cura-or-Simplify3D-for-Snapmaker-2-0->
+(10.11.2020)
+
+The recommended print speed is less than 60 mm/s, the recommended travel speed is less than 80 mm/s, and the recommended initial layer speed is less than 24 mm/s.
+
+## Acceleration Settings
+
+The official cura profiles limit acceleration to 1000 mm/s² via cura acceleration control settings. For travel moves this is okay, for extruding moves 750 mm/s² is better.
+This option in cura uses deprectated gcode, so I limited the acceleration in the start gcode section via following gcode line.
+
+    M204 T1000 P750; Set accelleration
+
+## Linear advance
+
+While testing with benchy and the overhang settings, I noticed some blobs and a seam where the speed change occured.
+To improve this I calibrated linear advance with the marlin calibration pattern https://marlinfw.org/tools/lin_advance/k-factor.html
+The K Factor influences the amount of extrusion in combination with speed changes.
+I determined that a value of 0.7 is okay.
+
+    M900 K0.07 ; set K-factor of linear advance
+
+## Junction deviation
+
+After printing a few objects I noticed visible lines on the walls of the print and a small amount of ringing and ghosting, especially after corners.
+With junction deviation calibration, I could minimize this effect.
+The parameter for junction deviation influences how the printhead brakes before and accelerates after a corner.
+More information can be found here:
+https://reprap.org/forum/read.php?1,739819
+
+For calibration I followed this youtube tutorial:
+
+https://youtu.be/Mnvj6xCzikM
+
+My whole debugging journey is documented in following thread:
+
+https://forum.snapmaker.com/t/back-to-printing-lines/13955
+
+I determined that a value of 0.06 is okay.
+
+    M205 J0.06 ; junction deviation to 0.06
 
 # Profiles
 
